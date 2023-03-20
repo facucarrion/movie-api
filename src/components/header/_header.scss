@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #000833;
+
+  &__title {
+    color: #ffe134;
+    font-size: 2.5rem;
+  }
+}
+
+.nav {
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  &__link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: 0.5s;
+
+    &:hover {
+      color: #ffe134;
+      text-decoration: underline;
+    }
+  }
+}

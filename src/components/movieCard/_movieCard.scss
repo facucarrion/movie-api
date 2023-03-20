@@ -1,0 +1,48 @@
+.movie__card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &--content {
+    opacity: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(21, 21, 21, 0.7);
+    transition: opacity 0.4s ease;
+    padding: 0 1rem;
+
+    &:hover {
+      opacity: 1;
+      cursor: default;
+    }
+
+    & > * {
+      text-align: center;
+    }
+  }
+
+  &--title {
+    font-size: 1.75rem;
+  }
+
+  &--see-more {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.5s;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      background-color: #4b4b4b;
+    }
+  }
+}

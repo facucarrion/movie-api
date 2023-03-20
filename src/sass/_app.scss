@@ -1,0 +1,27 @@
+@use './variables' as var;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: #efefef;
+  font-family: var.$font-family;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #212121;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  background-color: #212121;
+}
+
+#root > * {
+  width: 100%;
+}
