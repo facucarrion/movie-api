@@ -9,3 +9,5 @@ export const posterBaseUrl = 'https://image.tmdb.org/t/p/w500/'
 export const backdropBaseUrl = 'https://image.tmdb.org/t/p/w1280/'
 
 export const apiSearchUrl = `https://api.themoviedb.org/3/search/movie${apiKey}&language=en-US&query=`
+
+export const topRatedMoviesUrl = 'https://api.themoviedb.org/3/discover/movie/?certification_country=US&certification=R&sort_by=vote_average.desc&api_key=b4bec3328c641cd3cc20a16149eba553'
