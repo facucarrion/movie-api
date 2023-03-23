@@ -1,13 +1,15 @@
-export const apiKey = import.meta.env.VITE_API_KEY
+const {
+  VITE_API_KEY: apiKey,
+  VITE_IMAGE_BASE_URL: imageBaseUrl,
+  VITE_API_BASE_URI: apiBaseUri
+} = import.meta.env
 
-export const apiUrl = `https://api.themoviedb.org/3/movie/popular?${apiKey}`
+export { apiKey }
+export const apiUrl = apiBaseUri + `movie/popular?${apiKey}`
 
-export const apiDetailsUrl = 'https://api.themoviedb.org/3/movie/'
+export const apiDetailsUrl = id => `${apiBaseUri}movie/${id}?${apiKey}`
+export const apiSearchUrl = `${apiBaseUri}search/movie?${apiKey}&language=en-US&query=`
+export const topRatedMoviesUrl = `${apiBaseUri}discover/movie/?certification_country=US&certification=R&sort_by=vote_average.desc&${apiKey}`
 
-export const posterBaseUrl = 'https://image.tmdb.org/t/p/w500'
-
-export const backdropBaseUrl = 'https://image.tmdb.org/t/p/w1280'
-
-export const apiSearchUrl = `https://api.themoviedb.org/3/search/movie?${apiKey}&language=en-US&query=`
-
-export const topRatedMoviesUrl = `https://api.themoviedb.org/3/discover/movie/?certification_country=US&certification=R&sort_by=vote_average.desc&${apiKey}`
+export const posterBaseUrl = imageBaseUrl + 'w500'
+export const backdropBaseUrl = imageBaseUrl + 'w1280'

@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
-import { apiDetailsUrl, apiKey } from '../constants/constants'
+import { apiDetailsUrl } from '../constants/constants'
 
 const useMovieDetails = movieId => {
   const [movieDetails, setMovieDetails] = useState({})
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch(`${apiDetailsUrl}${movieId}?${apiKey}`)
+    fetch(apiDetailsUrl(movieId))
       .then(response => response.json())
       .then(data => {
         setMovieDetails(data)
