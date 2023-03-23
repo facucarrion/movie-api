@@ -16,11 +16,11 @@ const MovieDetails = () => {
   return (
     <section className='details'>
       <section className='details__backdrop'>
-        <img src={backdropBaseUrl + movieDetails.backdrop_path + apiKey} />
+        <img src={backdropBaseUrl + movieDetails.backdrop_path + `?${apiKey}`} />
       </section>
       <div className='details__content'>
         <section className='details__poster'>
-          <img src={posterBaseUrl + movieDetails.poster_path + apiKey} />
+          <img src={posterBaseUrl + movieDetails.poster_path + `?${apiKey}`} />
         </section>
         <section className='details__info'>
           <h2 className='details__title'>{movieDetails.title}</h2>

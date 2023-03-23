@@ -14,7 +14,7 @@ const usePopularMovies = () => {
       })
       .catch(error => console.log(error))
   }, [])
-
+  console.log(popularMovies)
   return { popularMovies, loading }
 }
 
