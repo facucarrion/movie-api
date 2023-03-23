@@ -6,7 +6,7 @@ const useMovieDetails = movieId => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch(apiDetailsUrl + movieId + apiKey)
+    fetch(`${apiDetailsUrl}${movieId}?${apiKey}`)
       .then(response => response.json())
       .then(data => {
         setMovieDetails(data)

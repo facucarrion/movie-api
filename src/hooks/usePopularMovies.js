@@ -13,7 +13,7 @@ const usePopularMovies = () => {
         setLoading(false)
       })
   }, [])
-
+  console.log(popularMovies)
   return { popularMovies, loading }
 }
 
