@@ -1,5 +1,7 @@
 .details {
   min-height: calc(100vh - 60px);
+  width: 100%;
+  max-width: 1200px;
 
   &__backdrop {
     width: 100%;

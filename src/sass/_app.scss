@@ -1,4 +1,5 @@
-@use './variables' as var;
+@use './variables' as *;
+@import './mixins';
 
 * {
   margin: 0;
@@ -6,19 +7,19 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   color: #efefef;
-  font-family: var.$font-family;
+  font-family: $font-family;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  background-color: #212121;
+  @include flex(center, flex-start);
+  background-color: $dark-color;
 }
 
 #root {
   min-height: 100vh;
   width: 100%;
-  background-color: #212121;
+  background-color: $dark-color;
+  @include flex(center, center);
 }
 
 #root > * {
